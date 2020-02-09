@@ -1,0 +1,9 @@
+Game rules:
+    Deal cards into a pile until the sum of all the cards in the pile is prime
+    Prime piles are discarded
+    Winner if the last card in the deck creates a prime pile
+    Display the total number of piles made to Win
+
+Classes:
+    Deck
+    Card
