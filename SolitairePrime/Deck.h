@@ -9,7 +9,6 @@ private:
     /* data */
 public:
     Deck(/* args */);
-    ~Deck();
 
     void refreshDeck();
     Card deal();

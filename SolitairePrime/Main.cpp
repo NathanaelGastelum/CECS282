@@ -6,13 +6,15 @@ using namespace std;
 
 int Main() 
 {
+	Card test;
+	test.showCard();
     int i;
     cout << "Welcome to Solitaire Prime!\n"
-            "1) New Deck\n"
-            "2) Display Deck\n"
-            "3) Shuffle Deck\n"
-            "4) Play Solitaire Prime\n"
-            "5) Exit\n";
+         << "1) New Deck\n"
+         << "2) Display Deck\n"
+         << "3) Shuffle Deck\n"
+         << "4) Play Solitaire Prime\n"
+         << "5) Exit\n";
     cin >> i;
 
     switch (i)
