@@ -1,1 +1,10 @@
 SolitairePrime/a.out
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/SolitairePrime/Debug
+/SolitairePrime/.vs
+SolitairePrime/SolitairePrime.sln
+*.vcxproj
