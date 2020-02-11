@@ -8,3 +8,5 @@ SolitairePrime/a.out
 /SolitairePrime/.vs
 SolitairePrime/SolitairePrime.sln
 *.vcxproj
+SolitairePrime/SolitairePrime.vcxproj.filters
+SolitairePrime/SolitairePrime.vcxproj.user
