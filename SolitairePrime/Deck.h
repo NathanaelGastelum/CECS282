@@ -6,15 +6,17 @@
 class Deck
 {
 private:
-    /* data */
+
+    Card deck[52];
+
 public:
-    Deck(/* args */);
-    ~Deck();
+
+    Deck();
 
     void refreshDeck();
     Card deal();
     void shuffle();
-    int cardsRemaining;
+    int cardsRemaining();
     void showDeck();
 };
 #endif

@@ -4,24 +4,26 @@
 
 using namespace std;
 
-int Main() 
+int main() 
 {
     int i;
     cout << "Welcome to Solitaire Prime!\n"
-            "1) New Deck\n"
-            "2) Display Deck\n"
-            "3) Shuffle Deck\n"
-            "4) Play Solitaire Prime\n"
-            "5) Exit\n";
+         << "1) New Deck\n"
+         << "2) Display Deck\n"
+         << "3) Shuffle Deck\n"
+         << "4) Play Solitaire Prime\n"
+         << "5) Exit\n";
     cin >> i;
+
+    Deck deck;
 
     switch (i)
     {
     case 1:
-        /* code */
+        deck.refreshDeck();
         break;
     case 2:
-        /* code */
+        deck.showDeck();
         break;
     case 3:
         /* code */
@@ -30,7 +32,6 @@ int Main()
         /* code */
         break;
     case 5:
-        /* code */
         break;
     
     default:
