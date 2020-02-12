@@ -77,13 +77,13 @@ void play(Deck deck) {
 			pileCount++;
 
 			if (deck.cardsLeft() == 0) {
-				cout << "\n\nWinner in " << pileCount << " piles!\n";
+				cout << "\nWinner in " << pileCount << " piles!\n";
+				return;
 			}
 
 			sum = 0;
 			i = 0;
 		}
-
 		if (deck.cardsLeft() == 0) {
 			cout << "\n\nLoser after " << pileCount << " piles :(\n";
 			return;
