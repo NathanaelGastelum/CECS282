@@ -29,6 +29,9 @@ int Card::getValue()
 	case 'A':
 		value = 1;
 		break;
+	case 'T':
+		value = 10;
+		break;
 	case 'J':
 		value = 10;
 		break;
@@ -47,5 +50,12 @@ int Card::getValue()
 
 void Card::showCard()
 {
-	cout << rank << suit << ' ';
+	//TODO display 'T' as "10"
+	if (rank == 'T')
+	{
+		cout << 10 << suit << ' ';
+	} 
+	else {
+		cout << rank << suit << ' ';
+	}
 }
