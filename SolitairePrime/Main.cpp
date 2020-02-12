@@ -36,7 +36,7 @@ void gameLoop(Deck deck) {
 		deck.showDeck();
 		break;
 	case 3:
-		/* code */
+		deck.shuffle();
 		break;
 	case 4:
 		/* code */
