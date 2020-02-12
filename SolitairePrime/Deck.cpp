@@ -1,3 +1,8 @@
+// Nathanael Gastelum
+// CECS 282-07
+// Prog 1 - Solitaire Prime
+// 2/12/2020
+
 #include "Deck.h"
 #include <iostream>
 #include <stdlib.h>
