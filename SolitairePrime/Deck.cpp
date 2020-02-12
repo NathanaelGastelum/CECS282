@@ -7,48 +7,16 @@ using namespace std;
 
 Deck::Deck()
 {
+	char suit[] = { 'S','C','H','D' };
+	char rank[] = { 'A','2','3','4','5','6','7','8','9','T','J','Q','K'};
+	
+	int c = 0;
 	for (int s = 0; s < 4; s++)
 	{
-		char suit;
-		switch (s)
+		for (int i = 0; i < 13; i++)
 		{
-		case 0:
-			suit = 'S';
-			break;
-		case 1:
-			suit = 'C';
-			break;
-		case 2:
-			suit = 'H';
-			break;
-		case 3:
-			suit = 'D';
-			break;
-		}
-
-		for (int i = 1; i < 14; i++)
-		{
-			switch (i)
-			{
-				case 1:
-					deck[i].setCard('A', suit);
-					break;
-				case 10:
-					deck[i].setCard('T', suit);
-					break;
-				case 11:
-					deck[i].setCard('J', suit);
-					break;
-				case 12:
-					deck[i].setCard('Q', suit);
-					break;
-				case 13:
-					deck[i].setCard('K', suit);
-					break;
-				default:
-					deck[i].setCard(i, suit); 
-					break;
-			}
+			deck[c].setCard(rank[i], suit[s]);
+			c++;
 		}
 	}
 	
@@ -82,15 +50,22 @@ void Deck::shuffle()
 
 }
 
+int Deck::cardsRemaining()
+{
+	return 0;
+}
+
 void Deck::showDeck()
 {
 	for (int i = 0; i < 52; i++)
 	{
 		deck[i].showCard();
+		cout << ' ';
 
-		if (i % 13 == 0)
+		if ((i + 1) % 13 == 0)
 		{
 			cout << '\n';
 		}
 	}
+	cout << '\n';
 }
