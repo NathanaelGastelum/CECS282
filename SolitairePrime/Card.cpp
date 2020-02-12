@@ -23,7 +23,26 @@ void Card::setCard(char r, char s)
 
 int Card::getValue()
 {
-	return 0;
+	int value;
+	switch (rank)
+	{
+	case 'A':
+		value = 1;
+		break;
+	case 'J':
+		value = 10;
+		break;
+	case 'Q':
+		value = 10;
+		break;
+	case 'K':
+		value = 10;
+		break;
+	default:
+		value = rank - '0';
+		break;
+	}
+	return value;
 }
 
 void Card::showCard()

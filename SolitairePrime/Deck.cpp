@@ -23,6 +23,8 @@ Deck::Deck()
 
 void Deck::refreshDeck()
 {
+	cardsRemaining = 52;
+
 	char suit[] = { 'S','C','H','D' };
 	char rank[] = { 'A','2','3','4','5','6','7','8','9','T','J','Q','K' };
 
@@ -39,9 +41,8 @@ void Deck::refreshDeck()
 
 Card Deck::deal()
 {
-	int i = 0;
-	Card topCard = deck[i];
-	i++;
+	Card topCard = deck[52-cardsRemaining];
+	cardsRemaining--;
 	return topCard;
 }
 
@@ -60,9 +61,9 @@ void Deck::shuffle()
 	}
 }
 
-int Deck::cardsRemaining()
+int Deck::cardsLeft()
 {
-	return 0;
+	return cardsRemaining;
 }
 
 void Deck::showDeck()

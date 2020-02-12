@@ -8,6 +8,7 @@ class Deck
 private:
 
     Card deck[52];
+	int cardsRemaining = 52;
 
 public:
 
@@ -16,7 +17,7 @@ public:
     void refreshDeck();
     Card deal();
     void shuffle();
-    int cardsRemaining();
+    int cardsLeft();
     void showDeck();
 };
 #endif
