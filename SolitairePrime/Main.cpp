@@ -15,13 +15,6 @@ bool isPrime(int num);
 
 int main() 
 {
-	cout << "Welcome to Solitaire Prime!\n"
-		<< "1) New Deck\n"
-		<< "2) Display Deck\n"
-		<< "3) Shuffle Deck\n"
-		<< "4) Play Solitaire Prime\n"
-		<< "5) Exit\n";
-
 	Deck deck;
 
 	gameLoop(deck);
@@ -31,6 +24,13 @@ int main()
 
 void gameLoop(Deck deck) {
 	
+	cout << "\nWelcome to Solitaire Prime!\n"
+		<< "1) New Deck\n"
+		<< "2) Display Deck\n"
+		<< "3) Shuffle Deck\n"
+		<< "4) Play Solitaire Prime\n"
+		<< "5) Exit\n";
+
 	int i;
 	cin >> i;
 
