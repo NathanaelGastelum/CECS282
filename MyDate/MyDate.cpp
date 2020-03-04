@@ -60,36 +60,39 @@ void MyDate::display()
 
 void MyDate::increaseDate(int N)
 {
-
+	JD++;
+	Julian2Greg(JD, month, day, year);
 }
 
 void MyDate::decreaseDate(int N)
 {
+	JD--;
+	Julian2Greg(JD, month, day, year);
 }
 
 int MyDate::daysBetween(MyDate D)
 {
-	return 0;
+	return Greg2Julian(D.month, D.day, D.year) - JD;
 }
 
 int MyDate::getMonth()
 {
-	return 0;
+	return month;
 }
 
 int MyDate::getDay()
 {
-	return 0;
+	return day;
 }
 
 int MyDate::getYear()
 {
-	return 0;
+	return year;
 }
 
 int MyDate::dayOfYear()
 {
-	return 0;
+	return JD - Greg2Julian(1, 1, year);
 }
 
 string MyDate::dayName()
