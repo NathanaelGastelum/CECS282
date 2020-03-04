@@ -12,3 +12,7 @@ SolitairePrime/SolitairePrime.vcxproj.filters
 SolitairePrime/SolitairePrime.vcxproj.user
 MyDate/.vs/
 MyDate/MyDate/Debug/
+MyDate/MyDate.sln
+*.user
+*.filters
+MyDate/Debug/
