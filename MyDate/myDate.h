@@ -10,16 +10,16 @@
 
 using namespace std;
 
-class MyDate
+class myDate
 {
 public:
-	MyDate();
-	MyDate(int M, int D, int Y);
+	myDate();
+	myDate(int M, int D, int Y);
 
 	void display();
 	void increaseDate(int N);
 	void decreaseDate(int N);
-	int daysBetween(MyDate D);
+	int daysBetween(myDate D);
 	int getMonth();
 	int getDay();
 	int getYear();

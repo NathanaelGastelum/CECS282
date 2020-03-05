@@ -3,7 +3,7 @@
 // Prog 2 - myDate Object
 // 3/4/2020
 
-#include "MyDate.h"
+#include "myDate.h"
 #include <iostream>
 
 using namespace std;
@@ -32,12 +32,12 @@ void Julian2Greg(int JD, int & month, int & day, int & year)
 	day = K;
 }
 
-MyDate::MyDate()
+myDate::myDate()
 {
-	MyDate(5, 11, 1959);
+	myDate(5, 11, 1959);
 }
 
-MyDate::MyDate(int M, int D, int Y)
+myDate::myDate(int M, int D, int Y)
 {
 	JD = Greg2Julian(M, D, Y);
 	Julian2Greg(JD, month, day, year);
@@ -52,50 +52,50 @@ MyDate::MyDate(int M, int D, int Y)
 	}
 }
 
-void MyDate::display()
+void myDate::display()
 {
 	string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 	cout << months[month - 1] << " " << day << ", " << year;
 }
 
-void MyDate::increaseDate(int N)
+void myDate::increaseDate(int N)
 {
 	JD += N;
 	Julian2Greg(JD, month, day, year);
 }
 
-void MyDate::decreaseDate(int N)
+void myDate::decreaseDate(int N)
 {
 	JD -= N;
 	Julian2Greg(JD, month, day, year);
 }
 
-int MyDate::daysBetween(MyDate D)
+int myDate::daysBetween(myDate D)
 {
 	return Greg2Julian(D.month, D.day, D.year) - JD;
 }
 
-int MyDate::getMonth()
+int myDate::getMonth()
 {
 	return month;
 }
 
-int MyDate::getDay()
+int myDate::getDay()
 {
 	return day;
 }
 
-int MyDate::getYear()
+int myDate::getYear()
 {
 	return year;
 }
 
-int MyDate::dayOfYear()
+int myDate::dayOfYear()
 {
-	return JD - Greg2Julian(1, 1, year);
+	return JD - Greg2Julian(1, 1, year) + 1;
 }
 
-string MyDate::dayName()
+string myDate::dayName()
 {
 	string days[7] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 	return days[JD % 7];
