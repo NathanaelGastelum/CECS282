@@ -74,7 +74,7 @@ void myDate::decreaseDate(int N)
 
 int myDate::daysBetween(myDate D)
 {
-	return Greg2Julian(D.month, D.day, D.year) - JD;
+	return Greg2Julian(D.month, D.day, D.year) - Greg2Julian(month, day, year);
 }
 
 int myDate::getMonth()
