@@ -60,13 +60,13 @@ void MyDate::display()
 
 void MyDate::increaseDate(int N)
 {
-	JD++;
+	JD += N;
 	Julian2Greg(JD, month, day, year);
 }
 
 void MyDate::decreaseDate(int N)
 {
-	JD--;
+	JD -= N;
 	Julian2Greg(JD, month, day, year);
 }
 
