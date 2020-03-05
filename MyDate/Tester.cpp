@@ -12,7 +12,9 @@ using namespace std;
 
 int main() {
 
+	myDate blankTest = myDate();
 	myDate date = myDate(3, 4, 2020);
+	blankTest.display();
 
 	cout << "Today is " << date.dayName() << " ";
 

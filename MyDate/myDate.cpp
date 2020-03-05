@@ -34,7 +34,9 @@ void Julian2Greg(int JD, int & month, int & day, int & year)
 
 myDate::myDate()
 {
-	myDate(5, 11, 1959);
+	month = 5;
+	day =  11;
+	year = 1959;
 }
 
 myDate::myDate(int M, int D, int Y)
