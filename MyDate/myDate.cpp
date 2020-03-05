@@ -10,8 +10,11 @@ using namespace std;
 
 int Greg2Julian(int month, int day, int year)
 {
-	return day - 32075 + 1461 * (year + 4800 + (month - 14) / 12) / 4 + 367 * (month - 2 - (month - 14) / 12 * 12)
-			/ 12 - 3 * ((year + 4900 + (month - 14) / 12) / 100) / 4;
+	int I = year;
+	int J = month;
+	int K = day;
+	int JD= K-32075+1461*(I+4800+(J-14)/12)/4+367*(J-2-(J-14)/12*12)/12-3*((I+4900+(J-14)/12)/100)/4;
+	return JD;
 }
 
 void Julian2Greg(int JD, int & month, int & day, int & year)
@@ -74,7 +77,8 @@ void myDate::decreaseDate(int N)
 
 int myDate::daysBetween(myDate D)
 {
-	return Greg2Julian(D.month, D.day, D.year) - Greg2Julian(month, day, year);
+	JD = Greg2Julian(month, day, year);
+	return Greg2Julian(D.month, D.day, D.year) - JD;
 }
 
 int myDate::getMonth()
