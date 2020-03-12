@@ -1,0 +1,31 @@
+Going to need
+
+strCpy() //String copy, know how to write for quiz
+strCmp() //String Compare
+
+//String Length
+int strLen(char a[]) 
+{
+    int i = 0;
+    while(a[i]) //or a[i++] and remove it from the body, also return i-1 
+    {
+        i++;
+    }
+    return i;
+}
+
+char left[20] = 'apple';
+char right[20] = 'orange;
+
+int strcmp(char l[], char r[])
+{
+    int i = 0;
+    while(l[i] == r[i])
+    {
+        if (l[i] == '\0') return 0; // Can this be written as NULL?
+        i++;
+    }
+    if (l[i] > r[i]) return 1;
+    if (l[i] < r[i]) return -1;
+    if ()
+}
