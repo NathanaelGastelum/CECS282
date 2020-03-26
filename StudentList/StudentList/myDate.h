@@ -1,7 +1,7 @@
 // Nathanael Gastelum
 // CECS 282-07
-// Prog 2 - myDate Object
-// 3/4/2020
+// Prog 3 - Structs
+// 3/25/2020
 
 #ifndef MyDate_h
 #define MyDate_h
@@ -17,6 +17,8 @@ public:
 	myDate(int M, int D, int Y);
 
 	void display();
+	void random();
+	string toString();
 	void increaseDate(int N);
 	void decreaseDate(int N);
 	int daysBetween(myDate D);

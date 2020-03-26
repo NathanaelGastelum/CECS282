@@ -1,10 +1,11 @@
 // Nathanael Gastelum
 // CECS 282-07
-// Prog 2 - myDate Object
-// 3/4/2020
+// Prog 3 - Structs
+// 3/25/2020
 
 #include "myDate.h"
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -61,6 +62,22 @@ void myDate::display()
 {
 	string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 	cout << months[month - 1] << " " << day << ", " << year;
+}
+
+void myDate::random()
+{
+	myDate start = myDate(01, 01, 1999);
+	myDate end = myDate(12, 31, 2004);
+	this->JD = (rand() % start.daysBetween(end)) + start.JD;
+	Julian2Greg(JD, month, day, year);
+}
+
+string myDate::toString()
+{
+	string months[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+	stringstream buffer;
+	buffer << months[month - 1] << " " << day << ", " << year;
+	return buffer.str();
 }
 
 void myDate::increaseDate(int N)
