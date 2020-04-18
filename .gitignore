@@ -3,7 +3,8 @@ SolitairePrime/a.out
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-*/.vs
+*/.vs/
+*/Debug/
 /SolitairePrime/Debug
 /SolitairePrime/.vs
 SolitairePrime/SolitairePrime.sln
@@ -17,4 +18,3 @@ MyDate/MyDate.sln
 *.filters
 MyDate/Debug/
 *.out
-*/Debug
