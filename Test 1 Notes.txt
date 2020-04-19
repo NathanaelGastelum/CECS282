@@ -1,0 +1,105 @@
+Notes
+
+upDate D(4, 6, 2020);
+upDate A(D); // Copy Constructor, same as A = D in this context
+
+//Copy Constructor
+upDate::upDate(upDate D)
+{
+    dptr = new int[3];
+    // Call julian to gregorian for Constructor with julian parameter 
+    dptr[0] = D.dptr[0];
+    dptr[1] = D.dptr[1];
+    dptr[2] = D.dptr[2];
+}
+
+Test:
+
+Pointer quiz
+cstrings:
+    strcopy
+    strcompare
+    strlength
+Programs 1, 2, 3
+Quizes 
+
+
+//----------------------------------------------------------------------------------------------------------
+
+//String Length
+int strLen(char a[]) 
+{
+    int i = 0;
+    while(a[i]) //or a[i++] and remove it from the body, also return i-1 
+    {
+        i++;
+    }
+    return i;
+}
+
+char left[20] = 'apple';
+char right[20] = 'orange;
+
+int strcmp(char l[], char r[])
+{
+    int i = 0;
+    while(l[i] == r[i])
+    {
+        if (l[i] == '\0') return 0;
+        i++;
+    }
+    if (l[i] > r[i]) return 1;
+    if (l[i] < r[i]) return -1;
+}
+
+char *strcopy(char *out, const char *src)
+{
+    int i = 0;
+    while (src[i] != '\0') {
+        out[i] = src[i];
+        i++;
+    }
+    out[i] = '\0'
+
+    return out;
+}
+
+//----------------------------------------------------------------------------------------------------------
+
+
+Quiz 3:
+Given:
+
+int main()
+{
+    Student s;
+    Student *sptr = &s;
+    populate (s);
+    display (sptr);
+    getchar();
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Answer:
+
+void populate(Student &s)<--- need to pass by reference, not pointer
+{
+   strcpy(s.name, "Albert");
+   s.ID = 42;
+   s.grade = 'A';
+   s.bday = myDate(03,14,1879);
+   s.homeTown = "Princeton, NJ";
+}
+
+void display(Student *sptr)<--- need a parameter type
+{
+   cout << sptr->name << endl;
+   cout << sptr->ID << endl;
+   cout << sptr->grade << endl;
+
+   sptr->bday.display();
+   cout << endl;
+
+   cout << sptr->homeTown << endl;
+}
